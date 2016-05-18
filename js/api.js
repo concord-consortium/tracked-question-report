@@ -1,18 +1,6 @@
 import fetch from 'isomorphic-fetch'
 import fakeData from 'json!./data/report.json'
-
-const urlParams = (() => {
-  const query = window.location.search.substring(1)
-  const rawVars = query.split("&")
-  let params = {}
-  rawVars.forEach((v) => {
-    let arr = v.split("=")
-    let pair = arr.splice(0, 1);
-    pair.push(arr.join("="));
-    params[pair[0]] = decodeURIComponent(pair[1])
-  })
-  return params
-})()
+import urlParams from './core/utils'
 
 // Report URL and auth tokens are provided as an URL parameters.
 const REPORT_URL = urlParams['reportUrl']
@@ -25,7 +13,13 @@ export function fetchReportData() {
       .then(response => response.json())
   } else {
     // Use fake data if REPORT_URL is not available.
-    return new Promise(resolve => setTimeout(() => resolve(fakeData), 500))
+    return new Promise((resolve, reject) =>
+      setTimeout(() => {
+        alert("he haw")
+        debugger
+        resolve({thing:1}) },
+      500))
+
   }
 }
 
