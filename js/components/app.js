@@ -5,7 +5,7 @@ import Button from '../components/button'
 import Report from '../components/report'
 import LoadingIcon from '../components/loading-icon'
 import ccLogoSrc from '../../img/cc-logo.png'
-import urlParams from '../core/utils'
+import { OFFERING_URL, AUTH_HEADER, fetchOfferingData } from '../api'
 import fetch from 'isomorphic-fetch'
 
 // (...)Data functions accept some state and return data in a form suitable for 'dumb' components.
@@ -22,10 +22,10 @@ export default class App extends Component {
       lastUpdated: Date.now(),
       isFetching: false,
       error: false,
-      offeringUrl: urlParams()['offering'],
+      offeringUrl: OFFERING_URL,
       report: {
-        offeringUrl: urlParams()['offering'],
-        token: urlParams()['token'],
+        offeringUrl: OFFERING_URL,
+        token: AUTH_HEADER,
         runs: [],
         offerings: []
       }
@@ -33,9 +33,14 @@ export default class App extends Component {
   }
 
   fetchData() {
-    const url = this.state.offeringUrl
     this.setState({isFetching: true})
-    console.log(`loading data from ${url}`)
+    fetchOfferingData().then(response => this.dataLoaded(response))
+  }
+
+  dataLoaded(response) {
+    console.log(JSON.stringify(response))
+    console.log(response)
+    this.setState({report: response, isFetching: false, lastUpdated: Date.now() })
   }
 
   componentDidMount() {

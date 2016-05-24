@@ -1,539 +1,292 @@
 {
-  "report_for": "class",
-  "report": {
-    "id": 18,
-    "type": "Investigation",
-    "name": "Test Sequence",
-    "children": [
-      {
-        "id": 29,
-        "type": "Activity",
-        "name": "Test Activity 1 (sequence part)",
-        "children": [
-          {
-            "id": 68,
-            "type": "Section",
-            "name": "Test Activity 1 (sequence part) Section",
-            "children": [
-              {
-                "id": 242,
-                "type": "Page",
-                "name": "1",
-                "children": [
-                  {
-                    "id": 116,
-                    "name": "Multiple Choice Question element",
-                    "question_number": 1,
-                    "description": "description ...",
-                    "prompt": "why does the temperature stay at 99&deg;",
-                    "enable_rationale": false,
-                    "rationale_prompt": "Explain your choice. Give specific examples.",
-                    "allow_multiple_selection": null,
-                    "is_required": false,
-                    "key": "Embeddable::MultipleChoice|116",
-                    "type": "Embeddable::MultipleChoice",
-                    "answers": [
-                      {
-                        "answer": [
-                          {
-                            "choice": "a",
-                            "is_correct": null
-                          },
-                          {
-                            "choice": "b",
-                            "is_correct": null
-                          }
-                        ],
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "is_correct": true,
-                        "type": "Embeddable::MultipleChoice",
-                        "embeddable_key": "Embeddable::MultipleChoice|116",
-                        "student_id": 15
-                      },
-                      {
-                        "answer": [
-                          {
-                            "choice": "a",
-                            "is_correct": null
-                          }
-                        ],
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "is_correct": true,
-                        "type": "Embeddable::MultipleChoice",
-                        "embeddable_key": "Embeddable::MultipleChoice|116",
-                        "student_id": 13
-                      },
-                      {
-                        "answer": [
-                          {
-                            "choice": "a",
-                            "is_correct": null
-                          }
-                        ],
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "is_correct": true,
-                        "type": "Embeddable::MultipleChoice",
-                        "embeddable_key": "Embeddable::MultipleChoice|116",
-                        "student_id": 14
-                      },
-                      {
-                        "student_id": 16,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::MultipleChoice|116"
-                      }
-                    ],
-                    "choices": [
-                      {
-                        "id": 421,
-                        "choice": "a",
-                        "is_correct": true
-                      },
-                      {
-                        "id": 422,
-                        "choice": "b",
-                        "is_correct": false
-                      },
-                      {
-                        "id": 423,
-                        "choice": "c",
-                        "is_correct": false
-                      }
-                    ]
-                  },
-                  {
-                    "id": 252,
-                    "name": "Open Response Question",
-                    "question_number": 2,
-                    "description": "What is the purpose of this question ...?",
-                    "prompt": "why does ...",
-                    "default_response": "",
-                    "rows": 5,
-                    "columns": 32,
-                    "font_size": 12,
-                    "is_required": false,
-                    "key": "Embeddable::OpenResponse|252",
-                    "type": "Embeddable::OpenResponse",
-                    "answers": [
-                      {
-                        "answer": "j3 answer",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::OpenResponse",
-                        "embeddable_key": "Embeddable::OpenResponse|252",
-                        "student_id": 15
-                      },
-                      {
-                        "answer": "j1 answer",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::OpenResponse",
-                        "embeddable_key": "Embeddable::OpenResponse|252",
-                        "student_id": 13
-                      },
-                      {
-                        "answer": "j2 answer",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::OpenResponse",
-                        "embeddable_key": "Embeddable::OpenResponse|252",
-                        "student_id": 14
-                      },
-                      {
-                        "student_id": 16,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::OpenResponse|252"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 30,
-        "type": "Activity",
-        "name": "Test Activity 2 (sequence part)",
-        "children": [
-          {
-            "id": 69,
-            "type": "Section",
-            "name": "Test Activity 2 (sequence part) Section",
-            "children": [
-              {
-                "id": 243,
-                "type": "Page",
-                "name": "1",
-                "children": [
-                  {
-                    "id": 117,
-                    "name": "Multiple Choice Question element",
-                    "question_number": 1,
-                    "description": "description ...",
-                    "prompt": "why does ...",
-                    "enable_rationale": false,
-                    "rationale_prompt": "Explain your choice. Give specific examples.",
-                    "allow_multiple_selection": null,
-                    "is_required": false,
-                    "key": "Embeddable::MultipleChoice|117",
-                    "type": "Embeddable::MultipleChoice",
-                    "answers": [
-                      {
-                        "answer": [
-                          {
-                            "choice": "a",
-                            "is_correct": null
-                          }
-                        ],
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "is_correct": true,
-                        "type": "Embeddable::MultipleChoice",
-                        "embeddable_key": "Embeddable::MultipleChoice|117",
-                        "student_id": 15
-                      },
-                      {
-                        "answer": [
-                          {
-                            "choice": "a",
-                            "is_correct": null
-                          }
-                        ],
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "is_correct": true,
-                        "type": "Embeddable::MultipleChoice",
-                        "embeddable_key": "Embeddable::MultipleChoice|117",
-                        "student_id": 13
-                      },
-                      {
-                        "answer": [
-                          {
-                            "choice": "a",
-                            "is_correct": null
-                          }
-                        ],
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "is_correct": true,
-                        "type": "Embeddable::MultipleChoice",
-                        "embeddable_key": "Embeddable::MultipleChoice|117",
-                        "student_id": 14
-                      },
-                      {
-                        "student_id": 16,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::MultipleChoice|117"
-                      }
-                    ],
-                    "choices": [
-                      {
-                        "id": 424,
-                        "choice": "a",
-                        "is_correct": null
-                      },
-                      {
-                        "id": 425,
-                        "choice": "b",
-                        "is_correct": null
-                      },
-                      {
-                        "id": 426,
-                        "choice": "c",
-                        "is_correct": null
-                      }
-                    ]
-                  },
-                  {
-                    "id": 253,
-                    "name": "Open Response Question",
-                    "question_number": 2,
-                    "description": "What is the purpose of this question ...?",
-                    "prompt": "why does ...",
-                    "default_response": "",
-                    "rows": 5,
-                    "columns": 32,
-                    "font_size": 12,
-                    "is_required": false,
-                    "key": "Embeddable::OpenResponse|253",
-                    "type": "Embeddable::OpenResponse",
-                    "answers": [
-                      {
-                        "answer": "j3 answer!",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::OpenResponse",
-                        "embeddable_key": "Embeddable::OpenResponse|253",
-                        "student_id": 15
-                      },
-                      {
-                        "answer": "j1 answer",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::OpenResponse",
-                        "embeddable_key": "Embeddable::OpenResponse|253",
-                        "student_id": 13
-                      },
-                      {
-                        "answer": "j2 answer!",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::OpenResponse",
-                        "embeddable_key": "Embeddable::OpenResponse|253",
-                        "student_id": 14
-                      },
-                      {
-                        "student_id": 16,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::OpenResponse|253"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": 244,
-                "type": "Page",
-                "name": "2",
-                "children": [
-                  {
-                    "id": 12,
-                    "name": "Embeddable::ImageQuestion element",
-                    "question_number": 3,
-                    "prompt": "why does ...",
-                    "drawing_prompt": "draw a picture of seagull",
-                    "is_required": false,
-                    "key": "Embeddable::ImageQuestion|12",
-                    "type": "Embeddable::ImageQuestion",
-                    "answers": [
-                      {
-                        "answer": {
-                          "image_url": "https://unsplash.it/600/600?image=100",
-                          "note": ""
-                        },
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::ImageQuestion",
-                        "embeddable_key": "Embeddable::ImageQuestion|12",
-                        "student_id": 15
-                      },
-                      {
-                        "answer": {
-                          "image_url": "https://unsplash.it/600/600?image=101",
-                          "note": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control."
-                        },
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::ImageQuestion",
-                        "embeddable_key": "Embeddable::ImageQuestion|12",
-                        "student_id": 13
-                      },
-                      {
-                        "answer": {
-                          "image_url": "https://unsplash.it/600/600?image=102",
-                          "note": "j2 note"
-                        },
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::ImageQuestion",
-                        "embeddable_key": "Embeddable::ImageQuestion|12",
-                        "student_id": 14
-                      },
-                      {
-                        "answer": {
-                          "image_url": "https://unsplash.it/600/600?image=103",
-                          "note": ""
-                        },
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::ImageQuestion",
-                        "embeddable_key": "Embeddable::ImageQuestion|12",
-                        "student_id": 16
-                      }
-                    ]
-                  },
-                  {
-                    "id": 7,
-                    "name": "Labbook album",
-                    "question_number": 4,
-                    "description": "description ...",
-                    "width": 600,
-                    "height": 500,
-                    "url": null,
-                    "display_in_iframe": true,
-                    "key": "Embeddable::Iframe|7",
-                    "type": "Embeddable::Iframe",
-                    "answers": [
-                      {
-                        "answer": "https://labbook.concord.org/albums?todo=report&source=CC_LARA&user_id=bb479315a27125ce86aa88a6e2a92b7f",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::Iframe",
-                        "embeddable_key": "Embeddable::Iframe|7",
-                        "student_id": 13,
-                        "display_in_iframe": true,
-                        "width": 600,
-                        "height": 500
-                      },
-                      {
-                        "answer": "https://labbook.concord.org/albums?todo=report&source=CC_LARA&user_id=e892a86e0c709308dd0ddcc574020b63",
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::Iframe",
-                        "embeddable_key": "Embeddable::Iframe|7",
-                        "student_id": 14,
-                        "display_in_iframe": true,
-                        "width": 600,
-                        "height": 500
-                      },
-                      {
-                        "student_id": 15,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::Iframe|7"
-                      },
-                      {
-                        "student_id": 16,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::Iframe|7"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 31,
-        "type": "Activity",
-        "name": "Test activity 3 (sequence part)",
-        "children": [
-          {
-            "id": 70,
-            "type": "Section",
-            "name": "Test activity 3 (sequence part) Section",
-            "children": [
-              {
-                "id": 245,
-                "type": "Page",
-                "name": "1",
-                "children": [
-                  {
-                    "id": 13,
-                    "name": "Embeddable::ImageQuestion element",
-                    "question_number": 1,
-                    "prompt": "why does ...",
-                    "drawing_prompt": "",
-                    "is_required": false,
-                    "key": "Embeddable::ImageQuestion|13",
-                    "type": "Embeddable::ImageQuestion",
-                    "answers": [
-                      {
-                        "answer": {
-                          "image_url": "https://unsplash.it/600/600?image=110",
-                          "note": "123"
-                        },
-                        "answered": true,
-                        "submitted": true,
-                        "question_required": false,
-                        "type": "Embeddable::ImageQuestion",
-                        "embeddable_key": "Embeddable::ImageQuestion|13",
-                        "student_id": 16
-                      },
-                      {
-                        "student_id": 13,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::ImageQuestion|13"
-                      },
-                      {
-                        "student_id": 14,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::ImageQuestion|13"
-                      },
-                      {
-                        "student_id": 15,
-                        "answer": null,
-                        "type": "NoAnswer",
-                        "embeddable_key": "Embeddable::ImageQuestion|13"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+  "offerings":[
+    {
+      "teacher":"Valerie Frizzle",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "activity":"Solar Oven",
+      "activity_url":"http://localhost:3000/activities/661",
+      "students":[
+        {
+          "name":"Student User 2",
+          "username":"student",
+          "started_activity":true,
+          "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/de2f4e50-d880-4477-8378-dd9947b7e4f9"
+        },
+        {
+          "name":"ada paessel",
+          "username":"apaessel",
+          "started_activity":true,
+          "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/29559bf0-341c-4d6f-8b70-ac579b65e8f7"
+        },
+        {
+          "name":"Linden Paessel",
+          "username":"lpaessel",
+          "started_activity":false,
+          "endpoint_url":null
+        }
+      ]
+    },
+    {
+      "teacher":"Valerie Frizzle",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "activity":"(2016) HASBOT Will there be enough fresh water?",
+      "activity_url":"http://localhost:3000/sequences/128",
+      "students":[
+        {
+          "name":"Student User 2",
+          "username":"student",
+          "started_activity":true,
+          "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/0c6fee51-b71c-42f0-8282-6b061e26aa41"
+        },
+        {
+          "name":"ada paessel",
+          "username":"apaessel",
+          "started_activity":true,
+          "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/a5f556aa-2c36-46a2-ae06-cbdc75afee0f"
+        },
+        {
+          "name":"Linden Paessel",
+          "username":"lpaessel",
+          "started_activity":false,
+          "endpoint_url":null
+        }
+      ]
+    },
+    {
+      "teacher":"Valerie Frizzle",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "activity":"AWESOME OVEN",
+      "activity_url":"http://localhost:3000/activities/663",
+      "students":[
+        {
+          "name":"Student User 2",
+          "username":"student",
+          "started_activity":true,
+          "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/1145aa3d-1f71-4060-b999-4239c09f3723"
+        },
+        {
+          "name":"ada paessel",
+          "username":"apaessel",
+          "started_activity":false,
+          "endpoint_url":null
+        },
+        {
+          "name":"Linden Paessel",
+          "username":"lpaessel",
+          "started_activity":false,
+          "endpoint_url":null
+        }
+      ]
+    },
+    {
+      "teacher":"Valerie Frizzle",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "activity":"Test Tracked Questions",
+      "activity_url":"http://localhost:3000/activities/674",
+      "students":[
+        {
+          "name":"Student User 2",
+          "username":"student",
+          "started_activity":true,
+          "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/46f83d3d-e6c5-457c-b174-22c3ad0b6d85"
+        },
+        {
+          "name":"ada paessel",
+          "username":"apaessel",
+          "started_activity":false,
+          "endpoint_url":null
+        },
+        {
+          "name":"Linden Paessel",
+          "username":"lpaessel",
+          "started_activity":false,
+          "endpoint_url":null
+        }
+      ]
+    }
+  ],
+  "students":{
+    "http://localhost:9099/dataservice/external_activity_data/de2f4e50-d880-4477-8378-dd9947b7e4f9":{
+      "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/de2f4e50-d880-4477-8378-dd9947b7e4f9",
+      "name":"Student User 2",
+      "username":"student",
+      "started_activity":true,
+      "activity":"Solar Oven",
+      "activity_url":"http://localhost:3000/activities/661",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    },
+    "http://localhost:9099/dataservice/external_activity_data/29559bf0-341c-4d6f-8b70-ac579b65e8f7":{
+      "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/29559bf0-341c-4d6f-8b70-ac579b65e8f7",
+      "name":"ada paessel",
+      "username":"apaessel",
+      "started_activity":true,
+      "activity":"Solar Oven",
+      "activity_url":"http://localhost:3000/activities/661",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    },
+    "null":{
+      "endpoint_url":null,
+      "name":"Linden Paessel",
+      "username":"lpaessel",
+      "started_activity":false,
+      "activity":"Test Tracked Questions",
+      "activity_url":"http://localhost:3000/activities/674",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    },
+    "http://localhost:9099/dataservice/external_activity_data/0c6fee51-b71c-42f0-8282-6b061e26aa41":{
+      "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/0c6fee51-b71c-42f0-8282-6b061e26aa41",
+      "name":"Student User 2",
+      "username":"student",
+      "started_activity":true,
+      "activity":"(2016) HASBOT Will there be enough fresh water?",
+      "activity_url":"http://localhost:3000/sequences/128",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    },
+    "http://localhost:9099/dataservice/external_activity_data/a5f556aa-2c36-46a2-ae06-cbdc75afee0f":{
+      "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/a5f556aa-2c36-46a2-ae06-cbdc75afee0f",
+      "name":"ada paessel",
+      "username":"apaessel",
+      "started_activity":true,
+      "activity":"(2016) HASBOT Will there be enough fresh water?",
+      "activity_url":"http://localhost:3000/sequences/128",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    },
+    "http://localhost:9099/dataservice/external_activity_data/1145aa3d-1f71-4060-b999-4239c09f3723":{
+      "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/1145aa3d-1f71-4060-b999-4239c09f3723",
+      "name":"Student User 2",
+      "username":"student",
+      "started_activity":true,
+      "activity":"AWESOME OVEN",
+      "activity_url":"http://localhost:3000/activities/663",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    },
+    "http://localhost:9099/dataservice/external_activity_data/46f83d3d-e6c5-457c-b174-22c3ad0b6d85":{
+      "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/46f83d3d-e6c5-457c-b174-22c3ad0b6d85",
+      "name":"Student User 2",
+      "username":"student",
+      "started_activity":true,
+      "activity":"Test Tracked Questions",
+      "activity_url":"http://localhost:3000/activities/674",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    }
   },
-  "class": {
-    "name": "Test Class",
-    "students": [
-      {
-        "id": 13,
-        "name": "John Jenkins",
-        "started_offering": true
+  "trackedQuestionSearchUrls":[
+    "http://localhost:3000/api/v1/question_trackers/find_by_activity/661",
+    "http://localhost:3000/api/v1/question_trackers/find_by_sequence/128",
+    "http://localhost:3000/api/v1/question_trackers/find_by_activity/663",
+    "http://localhost:3000/api/v1/question_trackers/find_by_activity/674"
+  ],
+  "trackedQuestions":[
+    {
+      "question_tracker":{
+        "name":"kitty",
+        "description":"This is mine",
+        "prompt":"<p><em><strong>xox</strong></em></p>",
+        "info":"Embeddable::OpenResponse : 6044 : <p><em><strong>xox</strong></em></p>",
+        "id":39
       },
-      {
-        "id": 14,
-        "name": "Jenna Armstrong",
-        "started_offering": true
+      "answers":[
+        {
+          "page_id":4181,
+          "question_id":6049,
+          "prompt":"<p><em><strong>xox</strong></em></p>",
+          "activity_id":668,
+          "activity_name":"Groundwater movement",
+          "endpoint":null,
+          "username":"no name",
+          "lara_user_id":2,
+          "student_name":"no name",
+          "clazz":"no class name",
+          "clazz_id":"0",
+          "teacher":"no teacher name",
+          "answer_hash":{
+            "type":"open_response",
+            "question_id":"6049",
+            "answer":"Oh this is my answer.  Its saved now.",
+            "is_final":false
+          },
+          "updated_int":1463080471,
+          "updated_str":"2016-05-12T19:14:31Z"
+        },
+        {
+          "page_id":4218,
+          "question_id":6069,
+          "prompt":"<p><em><strong>xox</strong></em></p>",
+          "activity_id":673,
+          "activity_name":"GW movement deux (noah copy test)",
+          "endpoint":null,
+          "username":"no name",
+          "lara_user_id":2,
+          "student_name":"no name",
+          "clazz":"no class name",
+          "clazz_id":"0",
+          "teacher":"no teacher name",
+          "answer_hash":{
+            "type":"open_response",
+            "question_id":"6069",
+            "answer":null,
+            "is_final":false
+          },
+          "updated_int":1462827281,
+          "updated_str":"2016-05-09T20:54:41Z"
+        }
+      ]
+    },
+    {
+      "question_tracker":{
+        "name":"Practice Question A",
+        "description":"for …",
+        "prompt":"<p>The most important thing we did today in class was...</p>",
+        "info":"Embeddable::MultipleChoice : 3168 : <p>The most important thing we did today in class was...</p>",
+        "id":40
       },
-      {
-        "id": 15,
-        "name": "Amy Galloway",
-        "started_offering": true
-      },
-      {
-        "id": 16,
-        "name": "John Ross",
-        "started_offering": true
-      },
-      {
-        "id": 18,
-        "name": "Kate Crosby",
-        "started_offering": false
-      }
-    ]
-  },
-  "visibility_filter": {
-    "active": false,
-    "questions": [
-      "Embeddable::MultipleChoice|116"
-    ]
-  },
-  "anonymous_report": false,
-  "is_offering_external": true,
-  "hide_controls": false
+      "answers":[
+        {
+          "page_id":4228,
+          "question_id":3171,
+          "prompt":"<p>The most important thing we did today in class was...</p>",
+          "activity_id":674,
+          "activity_name":"Test Tracked Questions",
+          "endpoint":"http://localhost:9099/dataservice/external_activity_data/46f83d3d-e6c5-457c-b174-22c3ad0b6d85",
+          "username":"no name",
+          "lara_user_id":5,
+          "student_name":"no name",
+          "clazz":"no class name",
+          "clazz_id":"0",
+          "teacher":"no teacher name",
+          "answer_hash":{
+            "type":"multiple_choice",
+            "question_id":"3171",
+            "answer_ids":[
+              "11743"
+            ],
+            "answer_texts":[
+              "Performed Investigations"
+            ],
+            "is_final":false
+          },
+          "updated_int":1464038824,
+          "updated_str":"2016-05-23T21:27:04Z"
+        }
+      ]
+    }
+  ]
 }
