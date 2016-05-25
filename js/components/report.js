@@ -14,9 +14,9 @@ export default class Report extends Component {
     const reportData = this.props.report
     const trackedQuestions = reportData.trackedQuestions || []
     return (
-      <div className="tracked-questions">
-        Report:
-        {trackedQuestions.map(q => <TrackedQuestion question={q} />)}
+      <div className="report-content">
+        <h1>Tracked Questions Report</h1>
+        {trackedQuestions.map((q,i) => <TrackedQuestion question={q} key={i} />)}
       </div>
     )
   }

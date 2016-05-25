@@ -14,7 +14,9 @@ export default class Answers extends Component {
   }
 
   render() {
-    const pageAnswers     = _.groupBy(this.props.answers, 'page_id')
+    const pageAnswers     = _.groupBy(this.props.answers, (answer) => {
+      return `${answer.activity_name}`
+    })
     const possibleAnswers = _.uniq(this.props.answers.map(answer => this.getAnswerText(answer)))
 
     const series = possibleAnswers.map(answer => {
@@ -24,10 +26,12 @@ export default class Answers extends Component {
     return (
       <div className="answers">
         <div className="legend">
-          <Legend chartSeries={series} width={600} legendPosition="left"/>
+          <Legend chartSeries={series} width={600} legendHeight={18} legendPosition="left"/>
         </div>
         <div className="pie-charts">
-          { _.keys(pageAnswers).map(pageId => <Answer series={series} pageId={pageId} answers={pageAnswers[pageId]} />) }
+          { _.keys(pageAnswers).map(pageId =>
+            <Answer series={series} key={pageId} pageId={pageId} answers={pageAnswers[pageId]} />)
+          }
         </div>
       </div>
     )

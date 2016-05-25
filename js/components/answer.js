@@ -45,13 +45,10 @@ export default class Answer extends Component {
       return datum.name
     }
 
-    debugger
+
 
    return(
     <div className="answer">
-      <div className="metadata">
-        Answer for page {pageId}
-      </div>
       <PieChart
         width={200}
         height={200}
@@ -61,7 +58,11 @@ export default class Answer extends Component {
         value = {valueFunction}
         name = {nameFunction}
         pieTextShow={false}
+        innerRadius={10}
       />
+      <div className="metadata">
+        {pageId}
+      </div>
     </div>
    )
   }
