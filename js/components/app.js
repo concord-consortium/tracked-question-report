@@ -30,7 +30,9 @@ export default class App extends Component {
 
   fetchData() {
     this.setState({isFetching: true})
-    fetchOfferingData().then(response => this.dataLoaded(response))
+    fetchOfferingData()
+      .then(response => this.dataLoaded(response))
+      .catch(error => console.error(error.stack))
   }
 
   dataLoaded(response) {
