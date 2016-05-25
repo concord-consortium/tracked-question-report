@@ -5,7 +5,7 @@ import OpenResponseAnswer from './open-response-answer'
 import MultipleChoiceAnswer from './multiple-choice-answer'
 import ImageAnswer from './image-answer'
 import NoAnswer from './no-answer'
-import { Chart } from 'react-d3-core'
+import { Legend, Chart } from 'react-d3-core'
 import { PieChart } from 'react-d3-basic'
 const AnswerComponent = {
   'Embeddable::OpenResponse': OpenResponseAnswer,
@@ -48,23 +48,19 @@ export default class Answer extends Component {
     }
 
    return(
-    <div className="answers">
-      Answer for page {pageId}
-      { answers.map(data => {
-        const answer = data.answer_hash
-        const answerText = answer.answer_texts ? answer.answer_texts.join(", ") : answer.answer
-        return (
-          <div className="answer">
-            {answerText}
-          </div>
-        )
-        })
-      }
+    <div className="answer">
+      <div className="metadata">
+        Answer for page {pageId}
+      </div>
+      <div className="legend">
+        <Legend chartSeries={series} width={600} legendPosition="left"/>
+      </div>
       <PieChart
         width={200}
         height={200}
         data= {data}
         chartSeries= {series}
+        showLegend={false}
         value = {valueFunction}
         name = {nameFunction}
       />
