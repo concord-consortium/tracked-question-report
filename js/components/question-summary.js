@@ -6,8 +6,6 @@ import '../../css/question-summary.less'
 @pureRender
 export default class QuestionSummary extends Component {
 
-
-
   get answered() {
     return this.props.question.get('answers').toJS().filter(a => a.type !== 'NoAnswer').length
   }

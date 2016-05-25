@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import pureRender from 'pure-render-decorator'
-import ImageAnswerModal from './image-answer-modal'
 
 import '../../css/image-answer.less'
 

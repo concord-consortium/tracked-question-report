@@ -3,30 +3,33 @@ import pureRender from 'pure-render-decorator'
 import OpenResponseAnswer from './open-response-answer'
 import MultipleChoiceAnswer from './multiple-choice-answer'
 import ImageAnswer from './image-answer'
-import IframeAnswer from './iframe-answer'
 import NoAnswer from './no-answer'
 
 const AnswerComponent = {
   'Embeddable::OpenResponse': OpenResponseAnswer,
   'Embeddable::MultipleChoice': MultipleChoiceAnswer,
   'Embeddable::ImageQuestion': ImageAnswer,
-  'Embeddable::Iframe': IframeAnswer,
   'NoAnswer': NoAnswer
 }
 
 @pureRender
 export default class Answer extends Component {
   render() {
-    const { answer, alwaysOpen } = this.props
-    if (typeof answer === 'undefined') {
-      // TODO:  This should be set, but in the case of sequences
-      // it seems its not. TBD later.
-      return <div>No response</div>
-    }
-    const AComponent = AnswerComponent[answer.get('type')]
-    if (!AComponent) {
-      return <div>Answer type not supported.</div>
-    }
-    return <AComponent answer={answer} alwaysOpen={alwaysOpen}/>
+    const pageId  = this.props.pageId
+    const answers = this.props.answers
+   return(
+    <div className="answers">
+      Answer for page {pageId}
+      {answers.map(data => {
+        const answer = data.answer_hash
+        const answerText = answer.answer_texts ? answer.answer_texts.join(", ") : answer.answer
+        return (
+          <div className="answer">
+            {answerText}
+          </div>
+        )
+      } )}
+    </div>
+   )
   }
 }

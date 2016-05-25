@@ -30,7 +30,6 @@ export function parseUrl(urlString) {
   }
 }
 
-
 export function fetchOfferingData() {
   if (false) {
     return fetchJSON(OFFERING_URL, {headers: {'Authorization': AUTH_HEADER}})
@@ -77,12 +76,6 @@ function fetchTrackedQuestions(state) {
     .then(results => Promise.all(results.map(tq => fetchReportForTrackedQuestion(tq))))
     .then(results => state.set('trackedQuestions', results))
   return trackedQuestions
-}
-
-
-function addStudentInfoToAnswers(state) {
-  const students = state.get('offerings').map(offering => offering.get('students'))
-  const answers  = state.get('trackedQuestions').map(question => question.get('answers'))
 }
 
 function createStudentRecord(offering, student) {
