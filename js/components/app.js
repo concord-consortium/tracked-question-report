@@ -23,12 +23,8 @@ export default class App extends Component {
       isFetching: false,
       error: false,
       offeringUrl: OFFERING_URL,
-      report: {
-        offeringUrl: OFFERING_URL,
-        token: AUTH_HEADER,
-        runs: [],
-        offerings: []
-      }
+      token: AUTH_HEADER,
+      report: {}
     }
   }
 
