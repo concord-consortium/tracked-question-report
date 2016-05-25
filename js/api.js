@@ -31,8 +31,8 @@ export function parseUrl(urlString) {
 }
 
 export function fetchOfferingData() {
-  //if (OFFERING_URL) {
-  if (false) {
+  if (OFFERING_URL) {
+  //if (false) {
     return fetchJSON(OFFERING_URL, {headers: {'Authorization': AUTH_HEADER}})
       .then(response => Immutable.fromJS({offerings: response}))
       .then(state    => loadStudentData(state))

@@ -13,10 +13,12 @@ export default class Report extends Component {
   render() {
     const reportData = this.props.report
     const trackedQuestions = reportData.trackedQuestions || []
+    const trackedQuestionsUniq = _.uniqBy(trackedQuestions, function(q) { return q.question_tracker.id})
+
     return (
       <div className="report-content">
         <h1>Tracked Questions Report</h1>
-        {trackedQuestions.map((q,i) => <TrackedQuestion question={q} key={i} />)}
+        {trackedQuestionsUniq.map((q,i) => <TrackedQuestion question={q} key={i} />)}
       </div>
     )
   }

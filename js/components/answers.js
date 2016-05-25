@@ -10,7 +10,7 @@ export default class Answers extends Component {
 
   getAnswerText(ans) {
     const answer = ans.answer_hash
-    return (answer.answer_texts ? answer.answer_texts.join(", ") : answer.answer || 'not answered')
+    return ((answer.answer_texts && answer.answer_texts.length > 0) ? answer.answer_texts.join(", ") : answer.answer || 'not answered')
   }
 
   render() {

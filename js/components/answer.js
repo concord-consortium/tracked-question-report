@@ -23,7 +23,7 @@ export default class Answer extends Component {
       const answer = data.answer_hash
       return (
         {
-          value: answer.answer_texts ? answer.answer_texts.join(", ") : (answer.answer || "not answered"),
+          value: (answer.answer_texts && answer.answer_texts.length > 0) ? answer.answer_texts.join(", ") : (answer.answer || "not answered"),
           unused: 'unused'
         }
       )
