@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import _ from 'lodash'
 import pureRender from 'pure-render-decorator'
 import OpenResponseAnswer from './open-response-answer'
 import MultipleChoiceAnswer from './multiple-choice-answer'
@@ -18,21 +19,31 @@ export default class Answer extends Component {
   render() {
     const pageId  = this.props.pageId
     const answers = this.props.answers
-    const data = [
-      {name: 'joe', value: 1},
-      {name: 'fred', value: 2},
-      {name: 'hank', value: 4},
-      {name: 'thelma', value: 4}
-    ]
-    const series = data.map( (data) =>{
-      return { field: data.name, name: data.name }
+    const answerTexts = answers.map(data => {
+      const answer = data.answer_hash
+      return (
+        {
+          value: answer.answer_texts ? answer.answer_texts.join(", ") : answer.answer,
+          unused: 'unused'
+        }
+      )
+    })
+    const groups = _.groupBy(answerTexts,'value')
+    const data = _.keys(groups).map(key => {
+      return {
+        name: key,
+        value: groups[key].length
+      }
+    })
+    const series = data.map(datum => {
+      return { field: datum.name, name: datum.name }
     })
 
-    const value = (datum) => {
+    const valueFunction = (datum) => {
       return datum.value
     }
 
-    const name = (datum) => {
+    const nameFunction = (datum) => {
       return datum.name
     }
 
@@ -54,8 +65,8 @@ export default class Answer extends Component {
         height={200}
         data= {data}
         chartSeries= {series}
-        value = {value}
-        name = {name}
+        value = {valueFunction}
+        name = {nameFunction}
       />
     </div>
    )
