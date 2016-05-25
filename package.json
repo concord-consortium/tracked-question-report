@@ -57,6 +57,7 @@
     "pure-render-decorator": "^0.2.0",
     "react": "^0.14.7",
     "react-bootstrap": "^0.28.3",
+    "react-d3-basic": "^1.6.11",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
     "react-responsive-carousel": "^3.0.10",
