@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import pureRender from 'pure-render-decorator'
 
-import '../../css/image-answer.less'
 
 @pureRender
 export default class ImageAnswer extends Component {

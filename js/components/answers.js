@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import pureRender from 'pure-render-decorator'
 import Answer from './answer'
 
-import '../../css/answers-table.less'
+import '../../css/answers.less'
 
 @pureRender
 export default class Answers extends Component {

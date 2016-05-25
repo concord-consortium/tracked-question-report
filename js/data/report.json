@@ -97,8 +97,8 @@
         {
           "name":"ada paessel",
           "username":"apaessel",
-          "started_activity":false,
-          "endpoint_url":null
+          "started_activity":true,
+          "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/1b2db12e-5582-4180-92c7-cd3f7226ce62"
         },
         {
           "name":"Linden Paessel",
@@ -180,6 +180,17 @@
       "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/46f83d3d-e6c5-457c-b174-22c3ad0b6d85",
       "name":"Student User 2",
       "username":"student",
+      "started_activity":true,
+      "activity":"Test Tracked Questions",
+      "activity_url":"http://localhost:3000/activities/674",
+      "clazz":"My Class",
+      "clazz_id":1,
+      "teacher":1
+    },
+    "http://localhost:9099/dataservice/external_activity_data/1b2db12e-5582-4180-92c7-cd3f7226ce62":{
+      "endpoint_url":"http://localhost:9099/dataservice/external_activity_data/1b2db12e-5582-4180-92c7-cd3f7226ce62",
+      "name":"ada paessel",
+      "username":"apaessel",
       "started_activity":true,
       "activity":"Test Tracked Questions",
       "activity_url":"http://localhost:3000/activities/674",
@@ -285,6 +296,33 @@
           },
           "updated_int":1464038824,
           "updated_str":"2016-05-23T21:27:04Z"
+        },
+        {
+          "page_id":4228,
+          "question_id":3171,
+          "prompt":"<p>The most important thing we did today in class was...</p>",
+          "activity_id":674,
+          "activity_name":"Test Tracked Questions",
+          "endpoint":"http://localhost:9099/dataservice/external_activity_data/1b2db12e-5582-4180-92c7-cd3f7226ce62",
+          "username":"no name",
+          "lara_user_id":6,
+          "student_name":"no name",
+          "clazz":"no class name",
+          "clazz_id":"0",
+          "teacher":"no teacher name",
+          "answer_hash":{
+            "type":"multiple_choice",
+            "question_id":"3171",
+            "answer_ids":[
+              "11742"
+            ],
+            "answer_texts":[
+              "Asked questions"
+            ],
+            "is_final":false
+          },
+          "updated_int":1464187176,
+          "updated_str":"2016-05-25T14:39:36Z"
         }
       ]
     }
