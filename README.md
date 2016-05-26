@@ -1,12 +1,8 @@
-![build-status](https://travis-ci.org/concord-consortium/longitude-report.svg?branch=master)
-
 # longitude-report
 
-[Portal](https://github.com/concord-consortium/rigse) report for teachers.
+[Portal](https://github.com/concord-consortium/rigse) and [Lara](https://github.com/concord-consortium/lara) report showing student progress for tracked questions.
 
-Demo: http://concord-consortium.github.io/longitude-report/
-
-It expects two URL params: `reportUrl` and `token`. If they are not provided, it will be using fake data, so it's easy to work on some features without connecting to the real Portal instance.
+It expects two URL params: `reportUrl` and `token`. If they are not provided, it will be using fake data, so it's easy to work on some features without connecting to the real Portal or Lara instances.
 
 ## Development
 
@@ -27,11 +23,6 @@ webpack-dev-server
 ```
 and open http://localhost:8080/ or http://localhost:8080/webpack-dev-server/ (auto-reload after each code change).
 
-## Test
-There are two scripts defined in `package.json`: `test` and `test:watch`.  These commands can be run from the terminal using the syntax `npm run test` and `npm run test:watch` respectively. The former script run the mocha test suite one time. The latter watches `test/**/*.js?x` files for changes, and runs the given test suite when the file changes.
-
- These tests were setup using [this tutorial](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html#unit-testing-support) as a guide.  They use [mocha](https://mochajs.org/), [chai](http://chaijs.com/api/bdd/), and [react test utils](https://facebook.github.io/react/docs/test-utils.html).
-
 ## Deployment
 
 #### Github Pages:
@@ -43,9 +34,10 @@ You can build a simple github page deployment by following these steps:
 1. push the changes to github: `git push`
 
 #### Travis S3 Deployment:
-Travis automatically builds and deploys branches and tags. A simple `git push` initiate a deployment of the current branch to amazon S3. Once completed the build we be available at `http://longitude-report.concord.org/branch/<branchname>`.  The production branch deploys to [http://longitude-report.concord.org/](http://longitude-report.concord.org/branch/master/)
+NOT Configured for this project.  See [Portal Report](https://github.com/concord-consortium/portal-report) project.
 
 #### Manual S3 Deployment
+Incomplete.
 If you want to do a manual deployment, put your S3 credentials in `.env` and copy `s3_deploy.sh` to a local git-ignored script. Fill in missing ENV vars, and then run that script.
 
 
