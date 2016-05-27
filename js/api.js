@@ -65,16 +65,18 @@ function lookupQuestionTrackerUrl(state) {
   return state.set('trackedQuestionSearchUrls', _.union(searchUrls.toJS()))
 }
 
-function fetchReportForTrackedQuestion(trackedQuestion) {
-  return fetchJSON(trackedQuestion.report_url)
+function fetchReportForTrackedQuestion(trackedQuestion, endpoints) {
+  return postJSON(trackedQuestion.report_url, {endpoints: endpoints} )
 }
 
 function fetchTrackedQuestions(state) {
   const trackedQuestionSearchUrls = state.get('trackedQuestionSearchUrls')
+  debugger
+  const endpoints = _.uniq(_.keys(state.get('students')))
   const searches = trackedQuestionSearchUrls.map(searchUrl => fetchJSON(searchUrl))
   const trackedQuestions = Promise.all(searches)
     .then(results => _.flatten(results))
-    .then(results => Promise.all(results.map(tq => fetchReportForTrackedQuestion(tq))))
+    .then(results => Promise.all(results.map(tq => fetchReportForTrackedQuestion(tq, endpoints))))
     .then(results => state.set('trackedQuestions', results))
   return trackedQuestions
 }
@@ -116,6 +118,18 @@ function fetchJSON(url, opts) {
   return fetch(url, opts)
     .then(checkStatus)
     .then(response => response.json())
+}
+
+function postJSON(url, data) {
+  return fetchJSON(url, {
+    method: 'put',
+    headers: {
+      'Authorization': AUTH_HEADER,
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  });
 }
 
 function checkStatus(response) {
