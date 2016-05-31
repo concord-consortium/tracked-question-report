@@ -5,18 +5,28 @@ import OpenResponseAnswer from './open-response-answer'
 import MultipleChoiceAnswer from './multiple-choice-answer'
 import ImageAnswer from './image-answer'
 import NoAnswer from './no-answer'
-import { PieChart } from 'react-d3-basic'
-const AnswerComponent = {
-  'Embeddable::OpenResponse': OpenResponseAnswer,
-  'Embeddable::MultipleChoice': MultipleChoiceAnswer,
-  'Embeddable::ImageQuestion': ImageAnswer,
-  'NoAnswer': NoAnswer
-}
+import Chart from 'react-chartjs'
+
+const Pie = Chart.Pie
+
+
 
 @pureRender
 export default class Answer extends Component {
+  colors(number) {
+    const saturation = '30%'
+    const lightness = '50%'
+    const values = _.map(_.range(number), (index) => {
+      let hue = (360/number) * (index + 1)
+      hue = _.round(hue,2)
+
+      return( `hsl(${hue},${saturation},${lightness}`)
+    })
+    return values
+  }
+
   render() {
-    const pageId  = this.props.pageId
+    const activity  = this.props.activity
     const answers = this.props.answers
     const series  = this.props.series
     const answerTexts = answers.map(data => {
@@ -29,39 +39,31 @@ export default class Answer extends Component {
       )
     })
     const groups = _.groupBy(answerTexts,'value')
-    const data = series.map(category => {
+    const colors = this.colors(_.keys(series).length)
+    const data = series.map((category, index) => {
       const name = category.field
       return {
-        name: name,
-        value: (groups[name] || []).length
+        label: `${name} - ${index}`,
+        value: (groups[name] || []).length ,
+        color: colors[index]
       }
     })
-
-    const valueFunction = (datum) => {
-      return datum.value
-    }
-
-    const nameFunction = (datum) => {
-      return datum.name
-    }
-
-
-
+    //debugger
+    //const students = _.map(answers, (answer) =>{
+    //  return {
+    //    name: answer.name
+    //  }
+    //})
    return(
+
     <div className="answer">
-      <PieChart
-        width={200}
-        height={200}
+      <Pie
         data= {data}
-        chartSeries= {series}
-        showLegend={false}
-        value = {valueFunction}
-        name = {nameFunction}
-        pieTextShow={false}
-        innerRadius={10}
+        width="180"
+        segmentStrokeWidth={1}
       />
       <div className="metadata">
-        {pageId}
+        {activity}
       </div>
     </div>
    )

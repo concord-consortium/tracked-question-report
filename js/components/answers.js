@@ -14,23 +14,17 @@ export default class Answers extends Component {
   }
 
   render() {
-    const pageAnswers     = _.groupBy(this.props.answers, (answer) => {
-      return `${answer.activity_name}`
-    })
-    const possibleAnswers = _.uniq(this.props.answers.map(answer => this.getAnswerText(answer)))
-
-    const series = possibleAnswers.map(answer => {
-      return { field: answer, name: answer}
-    })
+    const answers = this.props.answers
+    const activities = _.keys(answers)
+    const allAnswers = _.flatMap(activities, act => answers[act])
+    const possibleAnswers = _.uniq(allAnswers.map(answer => this.getAnswerText(answer)))
+    const series = possibleAnswers.map(answer => { return { field: answer, name: answer} })
 
     return (
       <div className="answers">
-        <div className="legend">
-          <Legend chartSeries={series} width={600} legendHeight={18} legendPosition="left"/>
-        </div>
         <div className="pie-charts">
-          { _.keys(pageAnswers).map(pageId =>
-            <Answer series={series} key={pageId} pageId={pageId} answers={pageAnswers[pageId]} />)
+          { activities.map(activity =>
+            <Answer series={series} key={activity} activity={activity} answers={answers[activity]} />)
           }
         </div>
       </div>
