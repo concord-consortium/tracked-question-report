@@ -8,8 +8,6 @@ import ccLogoSrc from '../../img/cc-logo.png'
 import { OFFERING_URL, AUTH_HEADER, fetchOfferingData } from '../api'
 import fetch from 'isomorphic-fetch'
 
-// (...)Data functions accept some state and return data in a form suitable for 'dumb' components.
-
 import '../../css/app.less'
 
 @pureRender
@@ -36,8 +34,6 @@ export default class App extends Component {
   }
 
   dataLoaded(response) {
-    console.log(JSON.stringify(response))
-    console.log(response)
     this.setState({report: response, isFetching: false, lastUpdated: Date.now() })
   }
 
@@ -82,15 +78,6 @@ export default class App extends Component {
         {isFetching && <LoadingIcon/>}
       </div>
     )
-  }
-}
-
-
-
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    fetchDataIfNeeded: () => dispatch(fetchDataIfNeeded()),
-    invalidateData: () => dispatch(invalidateData())
   }
 }
 

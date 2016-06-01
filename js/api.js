@@ -71,7 +71,6 @@ function fetchReportForTrackedQuestion(trackedQuestion, endpoints) {
 
 function fetchTrackedQuestions(state) {
   const trackedQuestionSearchUrls = state.get('trackedQuestionSearchUrls')
-  debugger
   const endpoints = _.uniq(_.keys(state.get('students')))
   const searches = trackedQuestionSearchUrls.map(searchUrl => fetchJSON(searchUrl))
   const trackedQuestions = Promise.all(searches)
