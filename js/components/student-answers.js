@@ -38,7 +38,9 @@ export default class StudentAnswers extends Component {
     })
     return(
       <table className="student-answers">
-        { _.map(students, student => <StudentRow student={student} />) }
+        <tbody>
+          { _.map(students, student => <StudentRow student={student} key={student.name}/>) }
+        </tbody>
       </table>
     )
   }
