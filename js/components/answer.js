@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import pureRender from 'pure-render-decorator'
 import Chart from 'react-chartjs'
-
+import StudentAnswers from './student-answers'
 const Pie = Chart.Pie
 
 
@@ -35,6 +35,7 @@ export default class Answer extends Component {
         <div className="metadata">
           {activity}
         </div>
+        <StudentAnswers answers={answers} colorSeries={colorSeries}/>
       </div>
     )
   }
