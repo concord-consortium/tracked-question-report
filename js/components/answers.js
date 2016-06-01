@@ -21,13 +21,15 @@ export default class Answers extends Component {
     const activities = _.keys(answers)
     const allAnswers = _.flatMap(activities, act => answers[act])
     const possibleAnswers = _.uniq(allAnswers.map(answer => this.getAnswerText(answer)))
-    const series = possibleAnswers.map(answer => { return { field: answer, name: answer} })
+    const notAnsweredColor = "hsl(0,0%,80%)"
+    const colorSeries = new ColorSeries(possibleAnswers, {'not answered': notAnsweredColor })
 
     return (
       <div className="answers">
+        <Legend colorSeries={colorSeries}/>
         <div className="pie-charts">
           { activities.map(activity =>
-            <Answer series={series} key={activity} activity={activity} answers={answers[activity]} />)
+            <Answer colorSeries={colorSeries} key={activity} activity={activity} answers={answers[activity]} />)
           }
         </div>
       </div>
