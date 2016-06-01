@@ -8,7 +8,7 @@ This is a simple passive react view, without any interactivity. `api.js` fetches
 
 It expects two URL params: `offering` and `token`. If they are not provided, it will be using fake data, so it's easy to work on some features without connecting to the real Portal or Lara instances.
 
-
+There is a [demo of the report](http://concord-consortium.github.io/tracked-question-report/) on github pages..
 
 ### Development
 
@@ -34,7 +34,8 @@ and open http://localhost:8080/ or http://localhost:8080/webpack-dev-server/ (au
 #### Github Pages:
 You can build a simple github page deployment by following these steps:
 1. prepare the destination directory: `rm -rf ./dist`
-1. clone the gh-pages branch to dist: `git clone -b gh-pages git@github.com:concord-consortium/longitude-report.git dist`
+1. clone the gh-pages branch to dist: `git clone -b gh-pages git@github.com:concord-consortium/git push --set-upstream origin gh-pages
+.git dist`
 1. build: `webpack`
 1. add the files and commit: `cd dist; git add .; git commit -m "gh-pages build"`
 1. push the changes to github: `git push`
