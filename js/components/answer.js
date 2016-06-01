@@ -12,16 +12,7 @@ export default class Answer extends Component {
     const activity  = this.props.activity
     const answers = this.props.answers
     const colorSeries  = this.props.colorSeries
-    const answerTexts = answers.map(data => {
-      const answer = data.answer_hash
-      return (
-        {
-          value: (answer.answer_texts && answer.answer_texts.length > 0) ? answer.answer_texts.join(", ") : (answer.answer || "not answered"),
-          unused: 'unused'
-        }
-      )
-    })
-    const groups = _.groupBy(answerTexts,'value')
+    const groups = _.groupBy(answers,'answerText')
     const data = _.map(colorSeries.classes(), name => {
       return {
         label: name,

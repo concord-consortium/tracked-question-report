@@ -19,8 +19,11 @@ export default class Answers extends Component {
   render() {
     const answers = this.props.answers
     const activities = _.keys(answers)
-    const allAnswers = _.flatMap(activities, act => answers[act])
-    const possibleAnswers = _.uniq(allAnswers.map(answer => this.getAnswerText(answer)))
+    const allAnswers = _.flatMap(activities, act => {
+      return _.map(answers[act], activity => _.merge(activity, {answerText: this.getAnswerText(activity)}))
+    })
+
+    const possibleAnswers = _.uniq(allAnswers.map(answer => answer.answerText))
     const notAnsweredColor = "hsl(0,0%,80%)"
     const colorSeries = new ColorSeries(possibleAnswers, {'not answered': notAnsweredColor })
 
