@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import pureRender from 'pure-render-decorator'
-import { Legend } from 'react-d3-core'
+import ColorSeries from '../core/color_series'
 import Answer from './answer'
+import Legend from './legend'
 import '../../css/answers.less'
+
+
 
 @pureRender
 export default class Answers extends Component {
