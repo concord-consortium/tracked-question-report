@@ -8,7 +8,6 @@ class StudentRow extends Component {
   render() {
     const student = this.props.student
     const name = student.name
-    const answer = student.answerText
     const color = student.color
     const colorKeyStyle = {
       backgroundColor: color,

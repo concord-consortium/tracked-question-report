@@ -2,9 +2,13 @@
 
 [Portal](https://github.com/concord-consortium/rigse) and [Lara](https://github.com/concord-consortium/lara) report showing student progress for tracked questions.
 
-It expects two URL params: `reportUrl` and `token`. If they are not provided, it will be using fake data, so it's easy to work on some features without connecting to the real Portal or Lara instances.
+This is a simple passive react view, without any interactivity. `api.js` fetches all the data required to generate the report. There is some awkwardness in `api.js` as it has to query LARA about all the tracked questions in an offering.  `api.js` could use some love and attention.
 
-## Development
+It expects two URL params: `offering` and `token`. If they are not provided, it will be using fake data, so it's easy to work on some features without connecting to the real Portal or Lara instances.
+
+
+
+### Development
 
 First, you need to make sure that webpack is installed and all the NPM packages required by this project are available:
 
@@ -23,7 +27,7 @@ webpack-dev-server
 ```
 and open http://localhost:8080/ or http://localhost:8080/webpack-dev-server/ (auto-reload after each code change).
 
-## Deployment
+### Deployment
 
 #### Github Pages:
 You can build a simple github page deployment by following these steps:
@@ -37,25 +41,14 @@ You can build a simple github page deployment by following these steps:
 NOT Configured for this project.  See [Portal Report](https://github.com/concord-consortium/portal-report) project.
 
 #### Manual S3 Deployment
-Incomplete.
-If you want to do a manual deployment, put your S3 credentials in `.env` and copy `s3_deploy.sh` to a local git-ignored script. Fill in missing ENV vars, and then run that script.
+NOT Configured for this project.  See [Portal Report](https://github.com/concord-consortium/portal-report) project.
 
+### Testing
+This project does not have adequate testing.  The package.json includes deps to test with Mocha and Chai, and under `./test/components` there is one solitary simple starting test.
 
 ### Frameworks, conventions
 
-This app is built using [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/) and [ImmutableJS](https://facebook.github.io/immutable-js/). If you are not familiar with one of these, take a look at [this great tutorial](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html). It also uses lots of ES6 syntax, so it might be good to review it first. Semicolons are discussable, but I've decided to follow Redux examples style.
-
-Some things that may be confusing when you start working with Redux (or at least they had been confusing for me):
-
-* Should I create component or container? [A good article](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5h6qk3ac0) and the most important part:
-
-> When you notice that some components don’t use the props they receive but merely forward them down and you have to rewire all those intermediate components any time the children need more data, it’s a good time to introduce some container components. This way you can get the data and the behavior props to the leaf components without burdening the unrelated components in the middle of the tree.
-
-* Is it okay to still use React's state? I think so, and so does [Redux's author](https://github.com/reactjs/redux/issues/1287). 
-
-Additional, useful resources:
-* [Redux examples](https://github.com/reactjs/redux/tree/master/examples)
-* [normalizr](https://github.com/gaearon/normalizr) transforms JSON data from Portal (flattens structure and groups objects by IDs)
+This app is built using [React](https://facebook.github.io/react/) Take a look at [this great tutorial](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html). It also uses lots of ES6 syntax, so it might be good to review it first. Semicolons are discussable, but I've decided to follow Redux examples style.
 
 ### CSS styles
 
