@@ -1,4 +1,6 @@
-# longitude-report
+![build-status](https://travis-ci.org/concord-consortium/tracked-question-report.svg?branch=master)
+
+# Tracked Questions Report
 
 [Portal](https://github.com/concord-consortium/rigse) and [Lara](https://github.com/concord-consortium/lara) report showing student progress for tracked questions.
 
