@@ -18,10 +18,10 @@ site: _site
 cloudfront_invalidate_root: true
 cloudfront_distribution_config:
   default_cache_behavior:
-    min_TTL: <%= 60 * 60 * 4 %>
+    min_ttl: <%= 60 * 60 * 4 %>
   aliases:
     quantity: 1
     items:
-      CNAME: longitude-report.concord.org
+      - longitude-report.concord.org
 
 
